@@ -1,6 +1,8 @@
 import React, { Suspense } from "react";
-import Motion from "./components/tests/Motion";
-import TestMotion from "./components/tests/TestMotion";
+// import Counter from "./features/counter/components/Counter";
+// import Motion from "./components/tests/Motion";
+// import TestMotion from "./components/tests/TestMotion";
+// import Counter from "./components/tests/Counter";
 // import MasterLayout from "./layouts/MasterLayout";
 // import TestBanner from "./components/tests/TestBanner";
 // import Counter from "./components/tests/Counter";
@@ -26,9 +28,11 @@ const App = () => {
         <TestBanner />
       </MasterLayout> */}
 
-      <Motion>
+      {/* <Motion>
         <TestMotion />
-      </Motion>
+      </Motion> */}
+
+      {/* <Counter /> */}
     </React.Fragment>
   );
 };
