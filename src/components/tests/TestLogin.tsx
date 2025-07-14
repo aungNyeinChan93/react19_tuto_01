@@ -1,5 +1,4 @@
 import React from "react";
-import { useFormStatus } from "react-dom";
 import Buttton from "./Button";
 
 interface LoginData {
@@ -27,8 +26,6 @@ const TestLogin = () => {
     };
     console.log(loginData);
   };
-
-  const { pending } = useFormStatus();
 
   return (
     <React.Fragment>

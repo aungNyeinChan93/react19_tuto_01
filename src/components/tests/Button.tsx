@@ -3,7 +3,7 @@ import { useFormStatus } from "react-dom";
 
 const Buttton = () => {
   const { pending, action, method, data } = useFormStatus();
-  //   console.log(action);
+  console.log(action);
   console.log(method);
   console.log(data);
 
