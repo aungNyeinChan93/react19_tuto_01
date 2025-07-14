@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { type AppDispatch, type RootState } from "../../../store";
 import { increment, decrement, reset } from "../CounterSlice";
+import { fetchTest } from "../CounterSlice";
 
 const Counter = () => {
-  const { count } = useSelector((store: RootState) => store.counter);
+  const { count, products } = useSelector((store: RootState) => store.counter);
   const dispatch: AppDispatch = useDispatch();
+
+  useEffect(() => {
+    fetchTest();
+  }, []);
+  console.log(products);
+
   return (
     <React.Fragment>
       <section>{count}</section>

@@ -1,4 +1,6 @@
 import React, { Suspense } from "react";
+import TestActionState from "./components/tests/TestActionState";
+// import Counter from "./features/counter/components/Counter";
 // import Counter from "./features/counter/components/Counter";
 // import Motion from "./components/tests/Motion";
 // import TestMotion from "./components/tests/TestMotion";
@@ -33,6 +35,7 @@ const App = () => {
       </Motion> */}
 
       {/* <Counter /> */}
+      <TestActionState />
     </React.Fragment>
   );
 };
