@@ -1,5 +1,10 @@
 import React, { Suspense } from "react";
-import TestApp from "./components/tests/TestApp";
+import Motion from "./components/tests/Motion";
+import TestMotion from "./components/tests/TestMotion";
+// import MasterLayout from "./layouts/MasterLayout";
+// import TestBanner from "./components/tests/TestBanner";
+// import Counter from "./components/tests/Counter";
+// import TestApp from "./components/tests/TestApp";
 // import Counter from "./components/tests/Counter";
 // import FetchTodo from "./components/FetchTodo";
 // import TestTheme from "./components/TestTheme";
@@ -16,8 +21,14 @@ const App = () => {
       {/* <TestTheme /> */}
       {/* <TestLogin /> */}
       {/* <Counter /> */}
+      {/* <TestApp /> */}
+      {/* <MasterLayout>
+        <TestBanner />
+      </MasterLayout> */}
 
-      <TestApp />
+      <Motion>
+        <TestMotion />
+      </Motion>
     </React.Fragment>
   );
 };
