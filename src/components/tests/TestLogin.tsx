@@ -1,21 +1,34 @@
 import React from "react";
+import { useFormStatus } from "react-dom";
+import Buttton from "./Button";
 
 interface LoginData {
-  username: string | null;
-  email: string | null;
-  password: string | number | null;
+  username: string;
+  email: string;
+  password: string | number;
 }
 
 const TestLogin = () => {
-  const loginSubmit = (data: FormData) => {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const loginSubmit = async (data: any) => {
+    const test = await new Promise((resolve) =>
+      setTimeout(() => {
+        console.log("hit");
+        resolve("this is resolve");
+      }, 4000)
+    );
+
+    console.log(test);
+
     const loginData: LoginData = {
       username: data.get("username"),
       email: data.get("email"),
       password: data.get("password"),
     };
-
     console.log(loginData);
   };
+
+  const { pending } = useFormStatus();
 
   return (
     <React.Fragment>
@@ -23,14 +36,6 @@ const TestLogin = () => {
         <div className="bg-gray-50">
           <div className="min-h-screen flex flex-col items-center justify-center py-6 px-4">
             <div className="max-w-[480px] w-full">
-              <a href="javascript:void(0)">
-                <img
-                  src="https://readymadeui.com/readymadeui.svg"
-                  alt="logo"
-                  className="w-40 mb-8 mx-auto block"
-                />
-              </a>
-
               <div className="p-6 sm:p-8 rounded-2xl bg-white border border-gray-200 shadow-sm">
                 <h1 className="text-slate-900 text-center text-3xl font-semibold">
                   Sign in
@@ -132,12 +137,7 @@ const TestLogin = () => {
                   </div>
 
                   <div className="!mt-12">
-                    <button
-                      type="submit"
-                      className="w-full py-2 px-4 text-[15px] font-medium tracking-wide rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none cursor-pointer"
-                    >
-                      Sign in
-                    </button>
+                    <Buttton />
                   </div>
                 </form>
               </div>
