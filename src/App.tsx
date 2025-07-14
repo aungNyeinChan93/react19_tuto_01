@@ -1,5 +1,6 @@
 import React, { Suspense } from "react";
-import Counter from "./components/tests/Counter";
+import TestApp from "./components/tests/TestApp";
+// import Counter from "./components/tests/Counter";
 // import FetchTodo from "./components/FetchTodo";
 // import TestTheme from "./components/TestTheme";
 // import TestLogin from "./components/tests/TestLogin";
@@ -14,8 +15,9 @@ const App = () => {
       <Suspense fallback={<Loading />}>{/* <FetchTodo /> */}</Suspense>
       {/* <TestTheme /> */}
       {/* <TestLogin /> */}
+      {/* <Counter /> */}
 
-      <Counter />
+      <TestApp />
     </React.Fragment>
   );
 };

@@ -10,14 +10,17 @@ const Counter = () => {
     prevState = prevState + 1;
     return prevState;
   }
-  const [state, formAction] = useActionState(increment, 0);
+
+  const [state, formAction, isPending] = useActionState(increment, 0);
   return (
     <React.Fragment>
       <section>
         <form>
           <span>{state}</span>
-          <button formAction={formAction}>+</button>
           <input title="name" type="text" name="name" id="name" />
+          <button disabled={isPending} type="submit" formAction={formAction}>
+            +
+          </button>
         </form>
       </section>
     </React.Fragment>
